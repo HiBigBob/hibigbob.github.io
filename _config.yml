@@ -1,0 +1,44 @@
+name: Adrien Bouttier - Developpeur full stack
+description: "Développeur full stack passionné. Développeur Symfony2 le jour, Père de famille le soir et en veille active sur le temps libre."
+meta_description: "Adrien Bouttier, Développeur Full-Stack"
+
+aboutPage: true
+
+markdown: redcarpet
+highlighter: pygments
+
+paginate: 20
+baseurl: /
+domain_name: 'http://www.adrienbouttier.com'
+google_analytics: 'UA-XXXXXXXX-X'
+disqus: false
+disqus_shortname: 'your-disqus-shortname'
+
+# Details for the RSS feed generator
+url:            'http://your-blog-url.example.com'
+author:         'Adrien Bouttier'
+authorTwitter:  'HiBigBob'
+
+permalink:       /:year/:title/
+
+gems:      ['jekyll-paginate']
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post
