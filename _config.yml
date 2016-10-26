@@ -5,7 +5,7 @@ meta_description: "Adrien Bouttier, Développeur Full-Stack"
 aboutPage: true
 
 markdown: redcarpet
-highlighter: pygments
+highlighter: rouge
 
 paginate: 20
 baseurl: /
