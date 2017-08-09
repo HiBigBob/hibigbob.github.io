@@ -290,4 +290,23 @@ for i < 10 {
 }
 {% endhighlight %}
 
+## Pointeurs
 
+Un pointeur comporte l'adresse mémoire d'une variable, l'utilisation d'un pointeur permet de récupérer sa valeur et la modifier. Sa syntaxe est la suivante :
+
+{% highlight golang %}
+var a int = 2
+var b *int = &a // pointeur vers a
+var c = *b      // c vaut 2
+
+*b = 3          // a vaut 3
+{% endhighlight %}
+
+Pour simplifié, on peut utiliser la syntaxe suivante :
+
+{% highlight golang %}
+a := 1
+b := &a         // pointeur vers a
+c = *b          // c vaut 2
+*b = 3          // a vaut 3
+{% endhighlight %}
