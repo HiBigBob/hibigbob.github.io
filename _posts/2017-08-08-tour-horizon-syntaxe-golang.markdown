@@ -11,7 +11,7 @@ Cet article a pour vocation de faire un résumé de la syntaxe du langage Go, de
 
 Go est un langage de programmation compilé et concurrent inspiré de C et Pascal, développé par Google et créé par Robert Griesemer, Rob Pike et Ken Thompson.
 
-Le langage a pour but d'être facile a prendre en mains et rapide en temps de compilation et d'exécution. Il peut être utiliser aussi bien pour réaliser des scripts que des applications.
+Le langage a pour but d'être facile à prendre en mains et rapide en temps de compilation et d'exécution. Il peut être utiliser aussi bien pour réaliser des scripts que des applications.
 
 ## La gestion des paquets
 
@@ -142,7 +142,7 @@ var a int = 1
 var b string = string(a)
 {% endhighlight %}
 
-Lors de l'initialisation d'une variable a partir d'une autre variable sans être explicite sur son type, la première variable (celle de gauche) va prendre le type de la deuxième (celle de droite)
+Lors de l'initialisation d'une variable à partir d'une autre variable sans être explicite sur son type, la première variable (celle de gauche) va prendre le type de la deuxième (celle de droite)
 
 {% highlight golang %}
 var a int = 1
@@ -335,4 +335,4 @@ array2[1] = "b"
 
 ## Conclusion
 
-J'ai volontairement omis de parler des types structurés, des interfaces, et de l'héritage. L'objectif de cet article était plus de donner un aperçu de la base de Go et ces derniers points méritent un article a eux seuls. Mais j'espère que la lecture de cet article vous aura convaincu de la facilité de compréhension de la syntaxe du langage Go.
+J'ai volontairement omis de parler des types structurés, des interfaces, et de l'héritage. L'objectif de cet article était plus de donner un aperçu de la base de Go et ces derniers points méritent un article à eux seuls. Mais j'espère que la lecture de cet article vous aura convaincu de la facilité de compréhension du langage Go.
