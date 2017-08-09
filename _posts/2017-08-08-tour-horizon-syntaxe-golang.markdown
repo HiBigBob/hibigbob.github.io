@@ -17,12 +17,12 @@ Le langage a pour but d'être facile a prendre en mains et rapide en temps de co
 
 Les programmes Go sont organisés en paquets.
 
-Le point d'entrée du programme est le paquet "main"
+Le point d'entrée du programme est le paquet "main" :
 
 {% highlight golang %}
 package "main"
 
-// Import des paquets
+// Importation des paquets
 
 func main () {}
 {% endhighlight %}
@@ -75,7 +75,7 @@ import (
 )
 {% endhighlight %}
 
-Dans les paquets, les éléments exportés sont ceux commençant par une majuscules (CamelCase): noms de fonctions, de types, de méthodes, de constantes, de variables... 
+Dans les paquets, les éléments exportés sont ceux commençant par une majuscules (CamelCase): noms de fonctions, de types, de méthodes, de constantes, de variables... :
 
 {% highlight golang %}
 package paquet
@@ -87,28 +87,15 @@ var fooPrivee string
 var FooPublic string
 
 func Public() string {
-	return "Public!"
+    return "Public!"
 }
 
 func privee() string {
-	return "Privée!"
+    return "Privée!"
 }
 {% endhighlight %}
 
 ## Le typage
-
-Les types de base sont :
-{% highlight golang %}
-string
-
-int  int8  int16  int32  int64 uint uint8 uint16 uint32 uint64 uintptr
-
-float32 float64
-
-complex64 complex128
-
-bool
-{% endhighlight %}
 
 Le type des variables se trouve après la variable :
 
@@ -116,7 +103,7 @@ Le type des variables se trouve après la variable :
 var a int, b int
 {% endhighlight %}
 
-On peut mettre le type uniquement sur le dernier paramètre lorsqu'il partage le mème type
+On peut mettre le type uniquement sur le dernier paramètre lorsqu'ils partagent le mème type :
 
 {% highlight golang %}
 var a, b int
@@ -135,15 +122,34 @@ var (
 )
 {% endhighlight %}
 
-Dans les fonctions, on peut aussi faire une déclaration de variable de type implicite
+Dans les fonctions, on peut aussi faire une déclaration de variable de type implicite :
 
 {% highlight golang %}
 a := 1
 b := 2
+{% endhighlight %}
 
-// A la place de 
+Au lieu de la déclaration explicite :
+
+{% highlight golang %}
 var a int, b int = 1, 2
 {% endhighlight %}
+
+On peut convertir la valeur a en type t avec l'expression t(a) :
+
+{% highlight golang %}
+var a int = 1
+var b string = string(a)
+{% endhighlight %}
+
+Lors de l'initialisation d'une variable a partir d'une autre variable sans être explicite sur son type, la première variable (celle de gauche) va prendre le type de la deuxième (celle de droite)
+
+{% highlight golang %}
+var a int = 1
+b := a
+{% endhighlight %}
+
+La variable b est de type int est a pour valeur 1.
 
 ## Les fonctions
 
@@ -151,23 +157,23 @@ Les paramètres des fonctions sont typés ainsi que le retour :
 
 {% highlight golang %}
 func Somme(a int, b int) int {
-	return a + b
+    return a + b
 }
 
 func Concat(a int, b int) string {
-	return a + " " + b
+    return a + " " + b
 }
 {% endhighlight %}
 
-On peut mettre le type uniquement sur le dernier paramètre lorsqu'il partage le mème type
+Comme pour la déclaration de variable, on peut mettre le type uniquement sur le dernier paramètre lorsqu'ils partagent le mème type :
 
 {% highlight golang %}
 func Somme(a, b int) int {
-	return a + b
+    return a + b
 }
 {% endhighlight %}
 
-Une fonction peut prendre un nombre variable de paramètre avec la syntaxe suivante
+Une fonction peut prendre un nombre variable de paramètre avec la syntaxe suivante :
 
 {% highlight golang %}
 func Somme(a ...int) int {
@@ -196,3 +202,92 @@ func Calc(a , b int) (somme int, multiplication int) {
     return
 }
 {% endhighlight %}
+
+On peut retourner plusieurs variables d'une fonction :
+
+{% highlight golang %}
+func Calc(a , b int) (int, int) {
+    somme = a + b
+    multiplication = a * b
+
+    return somme, multiplication
+}
+{% endhighlight %}
+
+## If, Switch, For
+
+### If
+
+{% highlight golang %}
+func Compare(a , b int) (bool) {
+    if a < b {
+        return true
+    } else {
+        return false
+    }
+}
+{% endhighlight %}
+
+Le "if" peut prendre une autre forme avec l'initialisation en même temps que la condition :
+
+{% highlight golang %}
+func True(a bool) (bool) {
+    if a := true ; a {
+        return true
+    } else {
+        return false
+    }
+}
+{% endhighlight %}
+
+### Switch
+
+{% highlight golang %}
+a := "foo"
+switch a {
+    case "foo": return "foo"
+    case "bar": return "bar"
+    default: return "foobar"
+}
+{% endhighlight %}
+
+On peut aussi avoir l'initialisation en même temps que la condition :
+
+{% highlight golang %}
+switch a := "foo"; a {
+    case "foo": return "foo"
+    case "bar": return "bar"
+    default: return "foobar"
+}
+{% endhighlight %}
+
+Pour gérer plusieurs cas, la syntaxe est la suivante :
+
+{% highlight golang %}
+a := "foo"
+switch a {
+    case "foo", "bar": return "foo bar"
+    case "test": return "test"
+    default: return "foobar"
+}
+{% endhighlight %}
+
+### For
+
+{% highlight golang %}
+count := 0
+for i := 0; i < 10; i++ {
+    count += i
+}
+{% endhighlight %}
+
+L'écriture peut être simplifié pour prendre la syntaxe du while de la manière suivante :
+
+{% highlight golang %}
+count := 0
+for i < 10 {
+    count += i
+}
+{% endhighlight %}
+
+
