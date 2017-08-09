@@ -310,3 +310,29 @@ b := &a         // pointeur vers a
 c = *b          // c vaut 2
 *b = 3          // a vaut 3
 {% endhighlight %}
+
+## Les tableaux
+
+La déclaration d'un tableau doit être typé :
+
+{% highlight golang %}
+var arrayString = []string
+var arrayArrayString = [][]string
+
+var arrayInt = []int
+{% endhighlight %}
+
+L'initialisation se fait avec la syntaxe suivante :
+
+{% highlight golang %}
+var array1 = []string("a", "b")
+
+var array2 = [2]string
+array2[0] = "a"
+array2[1] = "b"
+{% endhighlight %}
+
+
+## Conclusion
+
+J'ai volontairement omis de parler des types structurés, des interfaces, et de l'héritage. L'objectif de cet article était plus de donner un aperçu de la base de Go et ces derniers points méritent un article a eux seuls. Mais j'espère que la lecture de cet article vous aura convaincu de la facilité de compréhension de la syntaxe du langage Go.
