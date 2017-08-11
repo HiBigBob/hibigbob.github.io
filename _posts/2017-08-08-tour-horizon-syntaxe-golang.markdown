@@ -3,6 +3,7 @@ layout: post
 title:  "Tour d'horizon de la syntaxe de Golang !"
 date:   2017-08-06 14:02:36 +0200
 categories: golang syntaxe
+tags: [golang, syntaxe, débutant, découverte]
 ---
 
 Cet article a pour vocation de faire un résumé de la syntaxe du langage Go, de mettre en avant les points qui m'ont donné envie d'aller plus loin avec ce langage.
