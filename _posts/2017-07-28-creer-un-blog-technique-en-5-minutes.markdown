@@ -92,7 +92,6 @@ Pour en savoir plus sur cette procédure, vous pouvez vous reporter à la [docum
 
 ## Conclusion
 
-Il y a encore peu de temps, je voyais des personnes avec un blog technique réalisé avec Wordpress. 
-Moi qui aime la simplicité, j'ai trouvé ma solution:
-Même si les générateurs ne sont pas une nouveauté, nous sommes à la version 3.5 de Jekyll du ceup, les choses évolues et s'améliore
+Il y a encore peu de temps, je voyais des personnes avec un blog technique réalisé avec Wordpress.
+Personnellement, je choisis la simplicité. Même si les générateurs ne sont pas une nouveauté, nous sommes à la version 3.5 de Jekyll, ce qui lui donne du recul et de la stablilité.
 
