@@ -5,8 +5,8 @@ layout: default
 <section id="wrapper" class="home">
     <section class="header-resume">
     <div class="header-content">
-        <b>Développeur Full-Stack (Symfony2/ReactJs/NodeJs)</b> à Lyon depuis 9 ans. <br />
-        VIM addict, Bépo enthousiaste, en veille active sur des technos comme : <b>Go, ReactJs, NodeJs, VueJs, EmberJs</b>
+        <b>Développeur Fullstack (Symfony2/ReactJs/NodeJs)</b> à Lyon depuis 9 ans. <br />
+        VIM addict, Bépo enthousiaste, en veille active sur des technos comme : <b>ReactJs, NodeJs, VueJs, EmberJs, Go</b>
     </div>
 </section>
 
@@ -22,41 +22,41 @@ layout: default
         </div>
         <div class="time-body">
             <div class="content">
-                <h4>Lead développeur Symfony2 / ReactJs / NodeJs</h4>
+                <h4>Développeur Fullstack Symfony2 / ReactJs / NodeJs</h4>
                 <div class="details">
                     <i class="icon-location"></i> Wanadev | <i class="icon-globe"></i> Lyon | <i class="icon-calendar"></i> Depuis juin 2014
                 </div>
                 <div class="text">
+                    Lead développeur en régie pour le même client :
                     <ul class="list-task">
                         <li>
-                            Développement en Symfony2 / ReactJs
+                            d&#39;une API Restful Oauth2 (SilexPhp/MySQL)
                         </li>
                         <li>
-                            LeadDev d&#39;une API Restful Oauth2
+                            d&#39;une autre API Restful Oauth2 (NodeJs, PostgreSQL)
                         </li>
                         <li>
-                            Développement en NodeJs
+                            d&#39;un dashboard full ReactJs (ElasticSearch, RabbitMQ)
                         </li>
                         <li>
-                            Gestion de projets
-                        </li>
-                        <li>
-                            Optimisation des performances
+                            de différents sites Symfony2/3, le dernier a été réalisé avec un front end en ReactJs
                         </li>
                     </ul>
                 </div>
             </div>
             <p class="attribution">
-                <span class="labels">Symfony2</span>
                 <span class="labels">ReactJs</span>
                 <span class="labels">NodeJs</span>
+                <span class="labels">Symfony2</span>
                 <span class="labels">API RestFul</span>
                 <span class="labels">OAuth2</span>
-                <span class="labels">Silex</span>
-                <span class="labels">Optimisation SQL</span>
-                <span class="labels">ElasticSearch</span>
+                <span class="labels">PostgreSQL</span>
+                <span class="labels">Sass</span>
                 <span class="labels">Docker</span>
-                <span class="labels">PostgreSql</span>
+                <span class="labels">ElasticSearch</span>
+                <span class="labels">RabbitMQ</span>
+                <span class="labels">SilexPhp</span>
+                <span class="labels">Optimisation SQL</span>
             </p>
         </div>
     </article>
