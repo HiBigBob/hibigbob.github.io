@@ -36,7 +36,7 @@ layout: default
                             d&#39;une autre API Restful Oauth2 (NodeJs, PostgreSQL)
                         </li>
                         <li>
-                            d&#39;un dashboard full ReactJs (ElasticSearch, RabbitMQ)
+                            d&#39;un dashboard full ReactJs (Redux, ElasticSearch, RabbitMQ, NodeJs)
                         </li>
                         <li>
                             de différents sites Symfony2/3, le dernier a été réalisé avec un front end en ReactJs
