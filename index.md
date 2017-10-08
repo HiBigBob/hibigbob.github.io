@@ -39,6 +39,9 @@ layout: default
                             d&#39;un dashboard full ReactJs (Redux, ElasticSearch, RabbitMQ, NodeJs)
                         </li>
                         <li>
+                            de microservices en NodeJs
+                        </li>
+                        <li>
                             de différents sites Symfony2/3, le dernier a été réalisé avec un front end en ReactJs
                         </li>
                     </ul>
