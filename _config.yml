@@ -19,6 +19,20 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hibigbob
 github_username:  hibigbob
 
+months:
+    - Janvier
+    - Février
+    - Mars
+    - Avril
+    - Mai
+    - Juin
+    - Juillet
+    - Aout
+    - Septembre
+    - Octobre
+    - Novembre
+    - Décembre
+
 minima:
     date_format: "%d-%m-%Y"
 
