@@ -69,40 +69,7 @@ Le microservice va traiter chaque message de la file d'attente.
 
 Voici le code présant dans le projet :
 
-``` javascript
-'use strict';
-
-const amqplib = require('amqplib');
-
-const amqpUrl = `amqp://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@${process.env.RABBITMQ_HOST}${process.env.RABBITMQ_VHOST}`;
-const rabbitmqConnection = amqplib.connect(amqpUrl);
-
-rabbitmqConnection.then((conn) => {
-  return conn.createChannel();
-}).then((ch) => {
-  // One by one message
-  ch.qos(1);
-  return ch.assertQueue(process.env.QUEUE, {durable: true}).then(() => {
-    return ch.consume(process.env.QUEUE, (msg) => {
-      handler(msg.content.toString(), () => {
-        const currentdate = new Date();
-        console.log(` => Callback at : ${currentdate.toLocaleTimeString()}`);
-        // Message is done
-        ch.ack(msg);
-      });
-    }, {noAck: false});
-  });
-}).catch(console.warn);
-
-const handler = (message, callback) => {
-  // Handle message
-  console.log(`Message : ${message}`);
-
-  // Execute callback
-  callback();
-};
-
-```
+{% gist HiBigBob/11f30a1670b7b739690174e4884ccb81 microservice.js %}
 
 # API
 
@@ -110,60 +77,7 @@ L'API va permettre l'ajout de message dans la file d'attente.
 
 Voici le code présant dans le projet :
 
-``` javascript
-'use strict';
-
-const express = require('express');
-const app = express();
-const port = process.env.PORT || 4001;
-
-const rabbit = {
-  generateMessage: function(nbMessage) {
-    let lists = [];
-    for (let i = 0; i < nbMessage; i++) {
-      lists.push({
-        message: `ID ${i}`
-      });
-    }
-
-    return lists;
-  },
-
-  publishList: function(listContent, callback) {
-    const amqpUrl = `amqp://${process.env.RABBITMQ_USER}:${process.env.RABBITMQ_PASSWORD}@${process.env.RABBITMQ_HOST}${process.env.RABBITMQ_VHOST}`;
-    return amqplib.connect(amqpUrl).then(function(conn) {
-      return conn.createChannel().then(function(ch) {
-        const ok = ch.assertQueue(process.env.QUEUE, {durable: true});
-        return ok.then(function(_qok) {
-          listContent.forEach((content) => {
-            ch.sendToQueue(process.env.QUEUE, new Buffer(JSON.stringify(content)));
-          });
-
-          return ch.close();
-        });
-      }).finally(function() { conn.close(); });
-    }).catch(console.warn.bind(this, "catch"));
-  },
-};
-
-app.get('/messages/:nbMessage', (req, res) => {
-  // Generate messages
-  const messages = rabbit.generateMessage(req.params.nbMessage);
-
-  // Publish message to queue
-  return rabbit.publishList(messages).then(() => {
-    res.json({
-      status: 'success',
-      nbMessage: req.params.nbMessage
-    });
-  });
-});
-
-app.listen(port, () => {
-  console.log('Server started: ' + port);
-});
-
-```
+{% gist HiBigBob/11f30a1670b7b739690174e4884ccb81 api.js %}
 
 # Exécution
 
