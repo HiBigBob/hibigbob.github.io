@@ -14,6 +14,7 @@ gem "jekyll", "3.5.1"
 gem "minima", "~> 2.0"
 gem 'font-awesome-sass'
 gem "jekyll-sass-converter"
+gem "jekyll-gist"
 # gem "jekyll-theme-midnight", "~> 0.0.4"
 
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
