@@ -5,8 +5,8 @@ layout: default
 <section id="wrapper" class="home">
     <section class="header-resume">
     <div class="header-content">
-        <b>Développeur Fullstack (Symfony2/ReactJs/NodeJs)</b> à Lyon depuis 9 ans. <br />
-        VIM addict, Bépo enthousiaste, en veille active sur des technos comme : <b>ReactJs, NodeJs, VueJs, EmberJs, Go</b>
+        <b>Développeur Fullstack (NodeJs/ReactJs/Symfony2)</b> à Lyon depuis 9 ans. <br />
+        VIM addict, Bépo enthousiaste, en veille active sur des technos comme : <b>NodeJs, ReactJs, VueJs, Angular, Go</b>
     </div>
 </section>
 
@@ -22,7 +22,7 @@ layout: default
         </div>
         <div class="time-body">
             <div class="content">
-                <h4>Développeur Fullstack Symfony2 / ReactJs / NodeJs</h4>
+                <h4>Développeur Fullstack</h4>
                 <div class="details">
                     <i class="icon-location"></i> Wanadev | <i class="icon-globe"></i> Lyon | <i class="icon-calendar"></i> Depuis juin 2014
                 </div>
@@ -48,16 +48,18 @@ layout: default
                 </div>
             </div>
             <p class="attribution">
-                <span class="labels">ReactJs</span>
                 <span class="labels">NodeJs</span>
+                <span class="labels">ReactJs</span>
                 <span class="labels">Symfony2</span>
                 <span class="labels">API RestFul</span>
                 <span class="labels">OAuth2</span>
                 <span class="labels">PostgreSQL</span>
-                <span class="labels">Sass</span>
                 <span class="labels">Docker</span>
-                <span class="labels">ElasticSearch</span>
+                <span class="labels">Linux</span>
+                <span class="labels">PM2</span>
                 <span class="labels">RabbitMQ</span>
+                <span class="labels">Sass</span>
+                <span class="labels">ElasticSearch</span>
                 <span class="labels">SilexPhp</span>
                 <span class="labels">Optimisation SQL</span>
             </p>
