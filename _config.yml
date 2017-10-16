@@ -12,8 +12,8 @@ title: Adrien Bouttier
 author: hibigbob
 email: contact@adrienbouttier.com
 description: > # this means to ignore newlines until "baseurl:"
-    Développeur Full-Stack (Symfony2/ReactJs/NodeJs) à Lyon depuis 9 ans.
-    VIM addict, Bépo enthousiaste, en veille active sur des technos comme : Go, ReactJs, NodeJs, VueJs, EmberJS
+    Développeur Full-Stack (NodeJs/ReactJs/Symfony2) à Lyon depuis 9 ans.
+    VIM addict, Bépo enthousiaste, en veille active sur des technos comme : NodeJs, ReactJs, VueJs, Angular, Go
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: hibigbob
